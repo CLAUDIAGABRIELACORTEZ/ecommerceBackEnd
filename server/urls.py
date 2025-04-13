@@ -19,6 +19,7 @@ from django.urls import path, include
 from . import views  # si todavía usás vistas en server/views.py
 from accounts.serializers import CustomTokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenRefreshView, TokenObtainPairView
+from django.http import JsonResponse
 
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
