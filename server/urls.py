@@ -29,7 +29,7 @@ def health_check(request):
     return JsonResponse({"message": "Backend Django funcionando en Render "})
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('admin/', admin.site.urls),
+    path('', health_check),
     # Autenticación
     # path('login/', views.login, name='login'),
     # path('register/', views.register, name='register'),
