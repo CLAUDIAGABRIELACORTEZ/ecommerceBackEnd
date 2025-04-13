@@ -23,9 +23,12 @@ from rest_framework_simplejwt.views import TokenRefreshView, TokenObtainPairView
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
 
+# Vista simple para mostrar algo en la raíz
+def health_check(request):
+    return JsonResponse({"message": "Backend Django funcionando en Render "})
 urlpatterns = [
     path('admin/', admin.site.urls),
-
+    path('admin/', admin.site.urls),
     # Autenticación
     # path('login/', views.login, name='login'),
     # path('register/', views.register, name='register'),
@@ -38,6 +41,8 @@ urlpatterns = [
     # Rutas de tu app 'accounts'
     path('api/', include('accounts.urls')),
     path('api/', include('products.urls')),
+
+    # https://ecommercebackend-7m3u.onrender.com
 
 ]
 
