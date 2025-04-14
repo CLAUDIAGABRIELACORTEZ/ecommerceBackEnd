@@ -69,6 +69,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # si usás React
     "http://localhost:5173",  # si usás Vite
+    "https://ecommerce-front-end-i158.vercel.app",
 ]
 
 ROOT_URLCONF = 'server.urls'
