@@ -33,8 +33,8 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['192.168.0.6','192.168.0.3', 'localhost', '127.0.0.1','192.168.252.42']
-# ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost").split(",")
+# ALLOWED_HOSTS = ['192.168.0.6','192.168.0.3', 'localhost', '127.0.0.1','192.168.252.42']
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost").split(",")
 
 
 
