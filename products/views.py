@@ -1,8 +1,13 @@
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework import status
 from .models import Product, Category
 from .serializers import ProductSerializer, ProductCreateUpdateSerializer, CategorySerializer
+from django.db.models import F
+# from accounts.utils import enviar_notificacion_fcm
+from rest_framework.permissions import IsAuthenticated
+from accounts.models import CustomUser
+from server.firebase.Utils import enviar_notificacion_fcm  # Asegúrate que el import funcione con tu estructura
 
 # ---------- CATEGORÍAS ----------
 
@@ -88,3 +93,29 @@ def bulk_create_products(request):
         serializer.save()
         return Response({"message": "Productos creados correctamente", "data": serializer.data}, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def verificar_productos_bajo_stock(request):
+    productos_bajo_stock = Product.objects.filter(stock__lt=F('stock_minimo'))
+
+    if productos_bajo_stock.exists():
+        responsables = CustomUser.objects.filter(role__name="Admin")  # 🔁 o según tu lógica
+        for producto in productos_bajo_stock:
+            for responsable in responsables:
+                if responsable.fcm_token:
+                    enviar_notificacion_fcm(
+                        responsable.fcm_token,
+                        f" Stock bajo: {producto.name}",
+                        f"Solo quedan {producto.stock} unidades. Mínimo recomendado: {producto.stock_minimo}"
+                    )
+
+    return Response({"message": "Notificaciones enviadas si había stock bajo."})
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def alerta_stock_sms(request):
+    productos = Product.objects.filter(stock__lte=F('stock_minimo'))
+    serializer = ProductSerializer(productos, many=True)
+    return Response(serializer.data)

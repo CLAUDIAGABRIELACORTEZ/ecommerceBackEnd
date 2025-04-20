@@ -43,7 +43,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
 
     role = models.ForeignKey('Role', on_delete=models.SET_NULL, null=True)
-
+    fcm_token = models.TextField(null=True, blank=True)  #  para guardar el token
     objects = CustomUserManager()
 
     USERNAME_FIELD = 'email'
@@ -54,3 +54,4 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     def is_admin(self):
         return self.role and self.role.name == "Admin"
     
+

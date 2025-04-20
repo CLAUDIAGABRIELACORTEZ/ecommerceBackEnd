@@ -8,6 +8,8 @@ urlpatterns = [
     path('users/create/', views.create_user, name='create_user'),
     path('users/update/<int:user_id>/', views.update_user, name='update_user'),
     path('users/delete/<int:user_id>/', views.delete_user, name='delete_user'),
+    path('users/save-fcm-token/', views.guardar_fcm_token),
+    
 
     # Roles
     path('roles/', views.list_roles, name='list_roles'),

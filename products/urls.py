@@ -13,5 +13,8 @@ urlpatterns = [
     path('products/create/', views.create_product, name='create_product'),
     path('products/update/<int:product_id>/', views.update_product, name='update_product'),
     path('products/delete/<int:product_id>/', views.delete_product, name='delete_product'),
-     path('products/bulk-create/', views.bulk_create_products, name='bulk-create-products'),
+    path('products/bulk-create/', views.bulk_create_products, name='bulk-create-products'),
+    path('products/alerta-stock/',  views.verificar_productos_bajo_stock),
+    path('products/alerta-stock-sms/',  views.alerta_stock_sms),
+
 ]

@@ -30,18 +30,12 @@ def health_check(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', health_check),
-    # Autenticación
-    # path('login/', views.login, name='login'),
-    # path('register/', views.register, name='register'),
-    # path('profile/', views.profile, name='profile'),
-
-    # JWT personalizado (usa email)
     path('api/token/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-
     # Rutas de tu app 'accounts'
     path('api/', include('accounts.urls')),
     path('api/', include('products.urls')),
+    path('api/', include('sales.urls')),
 
     # https://ecommercebackend-7m3u.onrender.com
 

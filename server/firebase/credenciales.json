@@ -1,0 +1,16 @@
+
+
+{
+    "type": "service_account",
+    "project_id": "ecommerceinventario-e8bf9",
+    "private_key_id": "a6479893327a454cd1312add530df68e155dc11c",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCfTcBTCk9VGDXf\nR8s2ZcBd+bFNsz/hk6y401sQGWhpN/XqJeFKxgwGX/qzfIDpNj04LG7nZDIx8ODD\nVaNPhZRuAYUPDxNqmxzPPiyboEb4KyBw6KCUWbVAW52FrjAT8WQw8ZwMpU+X6Gyx\nfLVS/1BtckgET7Eo3QIh05g9fdF2DvfFgtbTpx+1n1+r3P1nV0ovu41wFBjrgMCm\nbDDq5dpSRcFB8BA9hQIZ7nhvaaiOhY6yaEHG4TPJK89Ok19bXR6x/1Fgaje0FMMn\nPV5vxWElrGtJSvnuCpGbG7MUNvE88omhikRszAnIsh3mMQ+Z9SGt8mmEyLslh3x6\nO5Lu9D35AgMBAAECggEAE103I0ud3cEl+Jst13yXh+oseZPFZcfhTKIxxTY2xpDN\nLVt8vu3DU8RiTA5hTnflCdP/iH8EdE+hx/y775RUOOmptpfli1A0OKOHy+8NUWik\noTTrIr1OK/bhofiiKCUalwciKeNaVnkj5Ts8gKHqW94dZPDESdb7mwhbzssMJWZ2\nb+wjGnqfyamt2jE+k7BhRzlLfTpfNqi+GXzviRzNnRjMvi0OGEobLimOQYH0xw9g\nklyP0+BVPiIaTuQ113SXOo4hEFNt2ERkhID6scmVKrNWyqf4pqZVDGyuXj/pw48c\nF2GhzFb/Csuacek5MSsRz6iVmTqbx9LF2lJRJqV7FQKBgQDb3VR/RFcyjpLAVShq\nEaDsrBSgqNkg6KPtAiyHj5oLyaWJA/bmbRoMedr8FumOCOYYu3CDaIE0mQ97Eg+Y\nX+7d68Rtl1U0/Hudw/R6JkfBSROm60R48V2nllTi1Zjfv4UAbHeUc60H6Ye7ZLBD\nBMhvwtJFPgsL32dfjFQ4CjHedwKBgQC5fFwMV/OzTMWThxvP4TZ6k8a3RFkWNONL\nLWEaVPRgJwHUjHQ7iq2KD15xnEnJL+nKbKzBXVSucENOPO0zPC4UEcz06N6Rawik\nC/1NpQOAVrHDXwo4v5u7Qk2H8UqBbFjBddhYcAnvjPbdQbQzlcFdLQWvpyEZnfGn\n5oST3B2zDwKBgQCJU3cBfsgP9elHZGk3xwcCjIDd0Fi+K1CoKqFxkoofLrXMHMPM\nLP0GKd5TcmQyqPA/JmQiT9XT6n422pMPE2x5BFfOM6Wu0LzNT6WV3e8XlPNHYM+F\n0wwyLr2aaNtxdYg3OYh/GrlKpdx3eW52jbg7xi3bveLcaY+BqH65+fQoBQKBgQCM\nwmkAHQadfJc7O37JpLk5EEfu7/lDNuN+O3PDDdFd3nwvFl9mh/jmGn+ra9U6zhd3\nPD1liDQpJJyPFQFUrkixhkipWsb8R+OIymhxsdYUYLYJ82fIZPADjW9UyLGnwdch\nCRMjGfMQTUNR6PidZPoWgYIdKJGf5RJsPi1CH/qR1QKBgH4wF29DcMbiDM+UvKLD\nNOwBRHhbW+EPeBtny0RYsXDy9q1SnXw2mdzoXdastMS9q+dMuTu9kRsgCDcP5kd8\nR8Y73a9pFqFXILR2BcE6WmyH1gPDZOZizbtm3ugg8hIU9Ay5g5pRGZS7SKXpoYBy\nE2J6n5Jq3/ozIJkgoDWKKx9c\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-fbsvc@ecommerceinventario-e8bf9.iam.gserviceaccount.com",
+    "client_id": "108759333933288495283",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40ecommerceinventario-e8bf9.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  

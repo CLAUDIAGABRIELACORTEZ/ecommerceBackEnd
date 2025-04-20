@@ -151,18 +151,19 @@ def delete_user(request, user_id):
     except CustomUser.DoesNotExist:
         return Response({'error': 'Usuario no encontrado'}, status=404)
 
-# # ========== ASIGNACIÓN DE ROL ==========
+# ========== FIREBASE GUARDAMOS EL TOKEN  ==========
+# accounts/views.py
 
-# @api_view(['POST'])
-# @permission_classes([IsAdminUser])
-# def assign_role(request, user_id):
-#     try:
-#         user = CustomUser.objects.get(pk=user_id)
-#         role = Role.objects.get(pk=request.data['role_id'])
-#         user.role = role
-#         user.save()
-#         return Response({'message': f'Rol "{role.name}" asignado a {user.username}'})
-#     except (CustomUser.DoesNotExist, Role.DoesNotExist):
-#         return Response({'error': 'Usuario o Rol no válido'}, status=400)
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def guardar_fcm_token(request):
+    token = request.data.get('token')
+    if not token:
+        return Response({"error": "No se envió token"}, status=400)
 
-# NOTA: Los permisos ahora están vinculados al rol. El usuario hereda los permisos automáticamente desde su rol.
+    user = request.user
+    user.fcm_token = token
+    user.save()
+    return Response({"message": "Token FCM guardado correctamente"})
+
+
