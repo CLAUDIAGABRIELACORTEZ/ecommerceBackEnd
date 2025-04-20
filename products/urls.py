@@ -17,4 +17,5 @@ urlpatterns = [
     path('products/alerta-stock/',  views.verificar_productos_bajo_stock),
     path('products/alerta-stock-sms/',  views.alerta_stock_sms),
 
+
 ]
